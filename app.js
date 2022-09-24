@@ -6,9 +6,8 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-
 app
-  .use(bodyParser.urlencoded({extended: true}))
-  .use(bodyParser.json({  extended: true }))
+  .use(bodyParser.urlencoded({ extended: true }))
+  .use(bodyParser.json({ extended: true }));
 
 module.exports = app;
