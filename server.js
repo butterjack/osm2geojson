@@ -1,5 +1,6 @@
 const http = require('http');
 const app = require('./app');
+const print = require('./utils/print');
 
 // Normalize port: check if port is a number
 const normalizePort = (val) => {
@@ -28,11 +29,11 @@ const onError = (error) => {
   const bind = typeof port === 'string' ? `pipe ${port}` : `port ${port}`;
   switch (error.code) {
     case 'EACCES':
-      console.error(`${bind} requires elevated privileges`);
+      print.error(`${bind} requires elevated privileges`);
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(`${bind} is already in use`);
+      print.error(`${bind} is already in use`);
       process.exit(1);
       break;
     default:
@@ -41,7 +42,7 @@ const onError = (error) => {
 };
 
 const onListening = () => {
-  console.log(`Listening on http://localhost:${port}`);
+  print.log(`Listening on http://localhost:${port}`);
 };
 
 const server = http.createServer(app);
