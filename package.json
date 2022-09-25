@@ -20,10 +20,12 @@
   },
   "homepage": "https://github.com/butterjack/osm2geojson#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "osmtogeojson": "^3.0.0-beta.4"
   },
   "devDependencies": {
     "eslint": "^8.24.0",
