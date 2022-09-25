@@ -8,7 +8,7 @@ dotenv.config();
 
 const { errorHandler } = require('./middlewares/error');
 const healthCheck = require('./utils/health-check');
-const geoLocation = require('./routes/geolocation')
+const geoLocation = require('./routes/geolocation');
 
 app
   .use(bodyParser.urlencoded({ extended: true }))
