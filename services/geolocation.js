@@ -6,9 +6,9 @@ const query_overpass = require('query-overpass');
 
 // eslint-disable-next-line no-unused-vars
 const getGeoJsonLocation = async (req, res, next) => {
-  // get bbox from query string
-  let result; const
-    { bbox } = req.query;
+  // get bbox from query string (we will let the api perform data validation)
+  let result;
+  const { bbox } = req.query;
 
   // make call to api
   try {
