@@ -18,7 +18,7 @@ describe('geolaction service', () => {
   });
 
   it('Should return an error when bbox is not properly defined', async () => {
-    const response = await request
+    await request
       .get('/geojson?bbox=string')
       .set('Accept', 'application/json')
       .expect(400);
