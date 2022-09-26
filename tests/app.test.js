@@ -6,7 +6,6 @@ const { errorHandler } = require('../middlewares/error');
 const request = supertest(app);
 
 // Mocked Express Request object.
-
 let req;
 
 // Mocked Express Response object.

@@ -1,14 +1,8 @@
-/* eslint-disable camelcase */
-/* eslint-disable consistent-return */
+/* eslint-disable camelcase, consistent-return */
 
 const axios = require('axios');
 const osmtogeojson = require('osmtogeojson');
 const query_overpass = require('query-overpass');
-
-// osmtogeojson package is not maintained(last publication was 3 years before)
-// and it has a lot of open issues(44 issues)
-// Relevant issue: https://github.com/tyrasd/osmtogeojson/issues/130
-// So I worked with the package as instructed and I added the results from query-overpass
 
 // eslint-disable-next-line no-unused-vars
 const getGeoJsonLocation = async (req, res, next) => {
@@ -31,7 +25,7 @@ const getGeoJsonLocation = async (req, res, next) => {
     if (err) {
       return res.json({ osmtogeojson: geojson_data });
     }
-    console.log(data);
+
     return res.json({
       osmtogeojson: geojson_data,
       query_overpass: data,
